@@ -8,19 +8,24 @@ int main()
 {
 	int num[5] = { 25, 10, 56, 43, 7 };
   int variable = 0;
-  int contador=0;
-  
-  for(int i=0; i<5; i++)
+  int variable_2=0;
+ 
+  variable = num[0];
+  for(int i=1; i<5; i++)
     {
-      if ( num[i] < num[i+1] ){
+      if ( num[i] < variable ){
            variable = num[i];
-      }
-      
+            }    
     }
-        if( variable > num[5-1] ){
-          variable = num[5-1];
-        }
-      cout<<"the smaller number is: "<<variable<<endl;
-       	
+      cout<<"the smaller number is: "<<variable<<endl;    	
+
+  variable_2 = num[0];
+  for(int i=1; i<5; i++)
+    {
+      if ( num[i] > variable_2 ){
+           variable_2 = num[i];
+            }    
+    }
+      cout<<"the largest number is: "    <<variable_2<<endl;    	 
 	return 0;
 }
